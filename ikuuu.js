@@ -37,7 +37,7 @@ if ($.isNode()) {
     
 async function checkIn(){
  return new Promise((resolve) => {
-   $.post(taskUrl(`https://ikuuu.co/user/checkin`),async(error, response, data) =>{
+   $.post(taskUrl(`https://ikuuu.dev/user/checkin`),async(error, response, data) =>{
     try{
       if (error) {
         console.log(`${JSON.stringify(error)}`)
@@ -62,8 +62,8 @@ function taskUrl(activity) {
     url: `${activity}`,
     headers: {
       'cookie': cookie,
-      'origin': 'https://ikuuu.co',
-      'referer': 'https://ikuuu.co/user',
+      'origin': 'https://ikuuu.dev',
+      'referer': 'https://ikuuu.dev/user',
       'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36',
     }
   }
